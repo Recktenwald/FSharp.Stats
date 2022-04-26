@@ -80,6 +80,7 @@
     <!-- Optimization -->
     <Compile Include="Optimization\GradientDescent.fs" />
     <Compile Include="Optimization\Bisection.fs" />
+    <Compile Include="Optimization\NelderMead.fs" />
     <Compile Include="Interpolation\Polynomial.fs" />
     <!-- Interpolation -->
     <Compile Include="Interpolation\LinearSpline.fs" />
