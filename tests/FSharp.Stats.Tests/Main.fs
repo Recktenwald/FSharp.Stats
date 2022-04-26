@@ -66,6 +66,10 @@ let main argv =
     Tests.runTestsWithCLIArgs [] argv FittingTests.leastSquaresCholeskyTests    |> ignore
     Tests.runTestsWithCLIArgs [] argv FittingTests.splineTests      |> ignore
 
+    //================================== Optimization ============================================================
+
+    Tests.runTestsWithCLIArgs [] argv OptimizationTests.NelderMead |> ignore
+
     //================================== Integration ============================================================
     Tests.runTestsWithCLIArgs [] argv IntegrationTests.numericalIntegrationTests      |> ignore
 
