@@ -2,6 +2,7 @@ namespace FSharp.Stats.Optimization
 
 module Testfun = 
     open FSharp.Stats
+    open System
     // Unbounded Optimization
     // // Rosenbrock function
     let rosenbrock v = 
@@ -20,11 +21,11 @@ module Testfun =
     let ackley v = 
         let n = float (Vector.length v)
         let firstSummand = 
-            20.0*exp(-0.2*Math.Sqrt((sphere v)/n))
+            20.0*exp(-0.2*sqrt((sphere v)/n))
 
         let sumOfCos = 
             v
-            |> Vector.map (fun vi -> Math.Cos(2.0*Math.PI*vi))
+            |> Vector.map (fun vi -> cos(2.0*Math.PI*vi))
             |> Vector.sum 
         let secondSummand = 
             exp(sumOfCos/n)
@@ -34,6 +35,6 @@ module Testfun =
     // //  Himmelblau function
     /// This is a 2D -> 1D function.
     /// Only uses the first two entries if a longer vector is passed as an argument.
-    let himmelblau v = 
-        (v[0]**2.0 + v[1] - 11.0)**2.0 + (v[0] + v[1]**2.0 - 7)**2.0
+    let himmelblau (v:Vector<float>) = 
+        (v[0]**2.0 + v[1] - 11.0)**2.0 + (v[0] + v[1]**2.0 - 7.0)**2.0
     
