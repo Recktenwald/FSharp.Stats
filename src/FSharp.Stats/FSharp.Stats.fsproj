@@ -82,6 +82,7 @@
     <Compile Include="Optimization\Bisection.fs" />
     <Compile Include="Optimization\NelderMead.fs" />
     <Compile Include="Interpolation\Polynomial.fs" />
+    <Compile Include="Interpolation\Testfun.fs" />
     <!-- Interpolation -->
     <Compile Include="Interpolation\LinearSpline.fs" />
     <Compile Include="Interpolation\CubicSpline.fs" />
